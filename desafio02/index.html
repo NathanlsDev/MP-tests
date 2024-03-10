@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header flex-column-center">
+      <section class="header-container max-view-width">
+        <h1>Motoboys</h1>
+        <p>Gerencie seu cadastro de motoboys.</p>
+      </section>
+    </header>
+
+    <main>
+      <section class="motoboys">
+        <button class="motoboys-btn" data-script="add-motoboy">Novo Motoboy+</button>
+        <ul class="motoboys-list">
+          <li class="motoboy" tabindex="0">
+            <figure class="motoboy-avatar-container">
+              <img src="assets/img/avatar_profile.webp" alt="" />
+            </figure>
+            Carlos
+          </li>
+          <li class="motoboy" tabindex="0">
+            <figure class="motoboy-avatar-container">
+              <img src="assets/img/avatar_profile.webp" alt="" />
+            </figure>
+            Luana
+          </li>
+          <li class="motoboy" tabindex="0">
+            <figure class="motoboy-avatar-container">
+              <img src="assets/img/avatar_profile.webp" alt="" />
+            </figure>
+            Ramon
+          </li>
+          <li class="motoboy" tabindex="0">
+            <figure class="motoboy-avatar-container">
+              <img src="assets/img/avatar_profile.webp" alt="" />
+            </figure>
+            Guilherme
+          </li>
+        </ul>
+      </section>
+
+      <section class="popUp" data-script="open-form">
+        <form action="" class="popUp-form">
+          <span class="close" data-script="close-form"></span>
+          <fieldset>
+            <figure class="profile-image-container">
+              <img class="avatar-image" src="assets/img/avatar_profile.webp" alt="" data-script="profile-image" />
+            </figure>
+            <label  class="file-label for="avatar-profile" tabindex="0">Escolher imagem
+              <input type="file" name="avatar profile" id="avatar-profile" accept="image/*" data-script="input-image" />
+            </label>
+          </fieldset>
+
+          <label for="name">Nome:
+            <input type="text" id="name" name="name" placeholder="Nome" required/>
+          </label>          
+          <label for="car-plate">Placa:
+            <input type="text" id="car-plate" name="car-plate" placeholder="Placa" required/>
+          </label>          
+          <label for="phone">Telefone:
+            <input type="number" id="phone" name="phone" placeholder="Telefone" required/>
+          </label>          
+          <label for="email">E-mail:
+            <input type="email" id="email" name="email" placeholder="E-mail" required/>
+          </label>
+          <input type="submit" value="Cadastrar"/>
+        </form>        
+      </section>
+
+      <aside class="motoboys-cards">
+        <figure class="overview-image-container">
+          <img class="overview-image" src="assets/img/avatar_profile.webp" alt="" />
+        </figure>
+        <h2>Carlos</h2>
+        <ul class="motoboy-infos">
+          <li>Placa: NXT 8456</li>
+          <li>Telefone: (45) 65854-5478</li>
+          <li>email: lucas@examlile.com</p>
+        </ul>
+        <div class="manager-actions">
+          <button class="btn-manager btn-edit" data-script="edit">Editar</button>
+          <button class="btn-manager btn-save" data-script="save">Salvar</button>
+          <button class="btn-manager btn-delete" data-script="remove">Excluir</button>
+        </div>
+      </aside>
+
+      <section class="popUp" data-script="popUp">
+        <div class="popUp-alert">
+          <span class="alert-img"></span>
+          <p>Você deseja confirmar a exclusão deste motoboy ?</p>
+          <div class="manager-btns">
+            <button class="btn-manager btn-edit" data-script="cancel" >Cancelar</button>
+            <button class="btn-manager btn-delete" data-script="confirm" >Excluir</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="popUp" data-script="popUp-confirmation">
+        <div class="popUp-alert">
+          <span class="confirmation-img"></span>
+          <p>O cadastro do motoboy foi excluído!</p>
+          <button class="btn-manager" data-script="closeAlert">Fechar</button>
+        </div>
+      </section>
+    </main>
+    <script src="assets/javascript/main.js"></script>
+  </body>
+</html>
