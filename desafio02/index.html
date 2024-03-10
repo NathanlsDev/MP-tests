@@ -18,36 +18,12 @@
         <h1>Motoboys</h1>
         <p>Gerencie seu cadastro de motoboys.</p>
       </section>
-    </header>
+    </header> 
 
     <main>
       <section class="motoboys">
-        <button class="motoboys-btn" data-script="add-motoboy">Novo Motoboy+</button>
-        <ul class="motoboys-list">
-          <li class="motoboy" tabindex="0">
-            <figure class="motoboy-avatar-container">
-              <img src="assets/img/avatar_profile.webp" alt="" />
-            </figure>
-            Carlos
-          </li>
-          <li class="motoboy" tabindex="0">
-            <figure class="motoboy-avatar-container">
-              <img src="assets/img/avatar_profile.webp" alt="" />
-            </figure>
-            Luana
-          </li>
-          <li class="motoboy" tabindex="0">
-            <figure class="motoboy-avatar-container">
-              <img src="assets/img/avatar_profile.webp" alt="" />
-            </figure>
-            Ramon
-          </li>
-          <li class="motoboy" tabindex="0">
-            <figure class="motoboy-avatar-container">
-              <img src="assets/img/avatar_profile.webp" alt="" />
-            </figure>
-            Guilherme
-          </li>
+        <button class="motoboys-btn" data-script="add-motoboy">Adicione Novo Motoboy+</button>
+        <ul class="motoboys-list" data-script="motoboys-list">         
         </ul>
       </section>
 
@@ -56,7 +32,7 @@
           <span class="close" data-script="close-form"></span>
           <fieldset>
             <figure class="profile-image-container">
-              <img class="avatar-image" src="assets/img/avatar_profile.webp" alt="" data-script="profile-image" />
+              <img class="avatar-image" src="assets/img/avatar_profile.webp" alt="template avatar profile" data-script="profile-image" />
             </figure>
             <label  class="file-label for="avatar-profile" tabindex="0">Escolher imagem
               <input type="file" name="avatar profile" id="avatar-profile" accept="image/*" data-script="input-image" />
@@ -75,19 +51,19 @@
           <label for="email">E-mail:
             <input type="email" id="email" name="email" placeholder="E-mail" required/>
           </label>
-          <input type="submit" value="Cadastrar"/>
+          <input type="submit" value="Cadastrar" data-script="submit"/>
         </form>        
       </section>
 
       <aside class="motoboys-cards">
         <figure class="overview-image-container">
-          <img class="overview-image" src="assets/img/avatar_profile.webp" alt="" />
+          <img class="overview-image" src="assets/img/avatar_profile.webp" alt="template avatar profile" data-script="card-image"/>
         </figure>
-        <h2>Carlos</h2>
+        <h2 data-script="card-title">Nome</h2>
         <ul class="motoboy-infos">
-          <li>Placa: NXT 8456</li>
-          <li>Telefone: (45) 65854-5478</li>
-          <li>email: lucas@examlile.com</p>
+          <li>Placa: <span data-script="card-plate"></span></li>
+          <li>Telefone: <span data-script="card-phone"></span></li>
+          <li>email: <span data-script="card-mail"></span></p>
         </ul>
         <div class="manager-actions">
           <button class="btn-manager btn-edit" data-script="edit">Editar</button>
